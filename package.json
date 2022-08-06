@@ -3,7 +3,7 @@
     "displayName": "Fuzzy Tag For C/C++",
     "description": "Fuzzy tag search based on Gtags",
     "icon": "images/icon.png",
-    "version": "0.0.3",
+    "version": "0.0.6",
     "publisher": "joeylu-vscode",
     "engines": {
         "vscode": "^1.26.0"

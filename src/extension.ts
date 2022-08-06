@@ -16,16 +16,7 @@ export function activate(context: vscode.ExtensionContext) {
 function get_pattern(keywords: string): string {
     var pattern: string = "";
     keywords.split(" ").forEach(function (w) {
-        w.split("").forEach(function (c) {
-            // 如果是小写，则忽略大小写
-            if (c === c.toLowerCase()) {
-                pattern += '[' + c.toLowerCase() + c.toUpperCase() + "].*?"; // 非贪婪匹配
-            }
-            else // 如果是大写，则只匹配大写
-            {
-                pattern += '[' + c.toUpperCase() + "].*?"; // 非贪婪匹配
-            }
-        });
+            pattern += w + ".*?"; // 非贪婪匹配
     });
     return pattern;
 }
